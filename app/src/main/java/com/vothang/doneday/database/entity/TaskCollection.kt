@@ -10,6 +10,6 @@ data class TaskCollection (
     val id: Int? = null,
     @ColumnInfo(name = "title")
     val title: String,
-    @ColumnInfo(name = "created_at")
+    @ColumnInfo(name = "updated_at")
     val updatedAt: Long
 )

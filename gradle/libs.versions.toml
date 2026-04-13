@@ -6,9 +6,10 @@ junitVersion = "1.3.0"
 espressoCore = "3.7.0"
 lifecycleRuntimeKtx = "2.10.0"
 activityCompose = "1.13.0"
-kotlin = "2.0.21"
-composeBom = "2024.09.00"
-roomdb = "2.6.1"
+kotlin = "2.3.20"
+composeBom = "2026.03.01"
+roomdb = "2.8.4"
+dataStore = "1.1.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -31,6 +32,8 @@ androidx-room-compiler = { group = "androidx.room", name = "room-compiler", vers
 androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomdb" }
 androidx-room-testing = { group = "androidx.room", name = "room-testing", version.ref = "roomdb" }
 androidx-room-paging = { group = "androidx.room", name = "room-paging", version.ref = "roomdb" }
+
+androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "dataStore" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

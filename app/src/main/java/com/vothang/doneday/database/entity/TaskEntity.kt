@@ -16,6 +16,6 @@ data class TaskEntity (
     val isCompleted: Boolean,
     @ColumnInfo(name = "collection_id")
     val collectionId: Int,
-    @ColumnInfo(name = "created_at")
+    @ColumnInfo(name = "updated_at")
     val updatedAt: Long
 )
