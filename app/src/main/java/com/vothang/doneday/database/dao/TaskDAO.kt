@@ -10,7 +10,7 @@ import com.vothang.doneday.database.entity.TaskCollection
 import com.vothang.doneday.database.entity.TaskEntity
 
 @Dao
-interface TaskDao {
+interface TaskDAO {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertTaskCollection(taskCollection: TaskCollection)
