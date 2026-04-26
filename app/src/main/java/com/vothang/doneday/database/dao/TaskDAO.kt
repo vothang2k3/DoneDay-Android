@@ -13,10 +13,10 @@ import com.vothang.doneday.database.entity.TaskEntity
 interface TaskDAO {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertTaskCollection(taskCollection: TaskCollection)
+    suspend fun insertTaskCollection(taskCollection: TaskCollection): Long
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertTask(taskEntity: TaskEntity)
+    suspend fun insertTask(taskEntity: TaskEntity): Long
 
     @Query("SELECT * FROM task_collection")
     suspend fun getTaskCollections(): List<TaskCollection>
@@ -31,10 +31,10 @@ interface TaskDAO {
     suspend fun updateTaskCompleted(taskId: Int, isCompleted: Boolean)
 
     @Update
-    suspend fun updateTask(task: TaskEntity)
+    suspend fun updateTask(task: TaskEntity) : Int
 
     @Update
-    suspend fun updateTaskCollection(taskCollection: TaskCollection)
+    suspend fun updateTaskCollection(taskCollection: TaskCollection) : Int
 
     @Delete
     suspend fun deleteTask(task: TaskEntity)

@@ -1,6 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
+
     alias(libs.plugins.kotlin.compose)
+
+    alias(libs.plugins.dagger.hilt.android)
+
     id("com.google.devtools.ksp")
 }
 
@@ -57,6 +61,9 @@ dependencies {
 
     // Add datastore preferences dependency
     implementation(libs.androidx.datastore.preferences)
+
+    implementation(libs.dagger.hilt.android)
+    ksp(libs.dagger.hilt.android.compiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

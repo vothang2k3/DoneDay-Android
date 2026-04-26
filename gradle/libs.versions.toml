@@ -10,6 +10,7 @@ kotlin = "2.3.20"
 composeBom = "2026.03.01"
 roomdb = "2.8.4"
 dataStore = "1.1.2"
+hiltAndroid = "2.59.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -34,8 +35,10 @@ androidx-room-testing = { group = "androidx.room", name = "room-testing", versio
 androidx-room-paging = { group = "androidx.room", name = "room-paging", version.ref = "roomdb" }
 
 androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "dataStore" }
+dagger-hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltAndroid" }
+dagger-hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hiltAndroid" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-
+dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
